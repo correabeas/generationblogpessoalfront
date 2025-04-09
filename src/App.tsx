@@ -2,9 +2,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Footer from './components/footer/Footer'
 import Navbar from './components/navbar/Navbar'
-import Login from './login/Login'
 import Home from './home/Home'
 import Cadastro from './cadastro/Cadastro'
+import Login from './login/Login'
+
+
+
 
 
 
