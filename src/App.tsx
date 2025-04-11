@@ -7,24 +7,29 @@ import Login from './pages/login/Login'
 import Cadastro from './pages/cadastro/Cadastro'
 import { AuthProvider } from './contexts/AuthContext'
 import ListaTemas from './temas/listatemas/ListaTemas'
+import FormTema from './temas/formtema/FormTema'
+import DeletarTema from './temas/deletartema/DeletarTema'
 
 
 function App() {
   return (
     <AuthProvider>
-        <BrowserRouter>
-          <Navbar />
-          <div className="min-h-[80vh]">
-            <Routes>
-              <Route path="/" element={<Login />} />
-              <Route path="/home" element={<Home />} />
-              <Route path="/cadastro" element={<Cadastro />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/temas" element={<ListaTemas />} />
-            </Routes>
-          </div>
-          <Footer />
-        </BrowserRouter>
+      <BrowserRouter>
+        <Navbar />
+        <div className="min-h-[80vh]">
+          <Routes>
+            <Route path="/" element={<Login />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/cadastro" element={<Cadastro />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/temas" element={<ListaTemas />} />
+            <Route path="/cadastrartema" element={<FormTema />} />
+            <Route path="/editartema/:id" element={<FormTema />} />
+            <Route path="/deletartema/:id" element={<DeletarTema />} />
+          </Routes>
+        </div>
+        <Footer />
+      </BrowserRouter>
     </AuthProvider>
   )
 }
